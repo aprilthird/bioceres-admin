@@ -1,0 +1,16 @@
+[
+    {
+        "username": "admin",
+        "password": "123456",
+        "email": "jeffreyrm96@gmail.com",
+        "first_name": "Luis Jeffrey",
+        "last_name": "Rojas Montes"
+    },
+    {
+        "username": "user1",
+        "password": "112233",
+        "email": "user1@gmail.com",
+        "first_name": "Usuario",
+        "last_name": "Prueba"
+    }
+]

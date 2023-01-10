@@ -1,0 +1,25 @@
+
+<div class="vh-100">
+    <div class="d-flex h-100 flex-row">
+        <div class="col-md-6 bg-dark d-flex align-items-end justify-content-center">
+            <img src="./assets/images/login-bg.png" />
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+            <h1 class="display-1">BIOCERES</h1>
+            <h3>Ingresar</h3>
+            <form class="d-flex flex-column">
+                <mat-form-field>
+                    <mat-label>Usuario</mat-label>
+                    <input matInput placeholder="Usuario" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput type="password" placeholder="Contraseña" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" />
+                </mat-form-field>
+                <button mat-button color="primary" (click)="redirectToRecoverPassword()">¿Olvidaste tu contraseña?</button>
+                <button mat-flat-button color="primary" type="button" (click)="onLogin()">INGRESAR</button>
+            </form>
+        </div>
+    </div>    
+</div>
+

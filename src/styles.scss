@@ -1,1 +1,159 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $bioceres-admin-primary: mat.define-palette(mat.$indigo-palette);
+// $bioceres-admin-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$black-color: #1D1D1E;
+$primary-palette: (
+    50: #efe5fb,
+    100: #d4c0f4,
+    200: #b795ed,
+    300: #9968e7,
+    400: #8144e2,
+    500: #6617dc,
+    600: #5b12d6,
+    700: #4903cd,
+    800: #3500c8,
+    900: #0400b9,
+    contrast: (
+        A200: $black-color,
+        50: $black-color,
+        100: $black-color,
+        200: $black-color,
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+    )
+);
+
+$secondary-palette: (
+    50: #e4ffef,
+    100: #bdffd8,
+    A100: #bdffd8,
+    200: #89ffbe,
+    A200: #89ffbe,
+    300: #2cffa0,
+    A300: #2cffa0,
+    400: #00fb86,
+    A400: #00fb86,
+    500: #00f572,
+    600: #00e366,
+    700: #00ce57,
+    A700: #00ce57,
+    800: #00bc4b,
+    900: #009935,
+    contrast: (
+        50: $black-color,
+        100: $black-color,
+        A100: $black-color,
+        200: $black-color,
+        A200: $black-color,
+        300: $black-color,
+        A300: $black-color,
+        400: $black-color,
+        A400: $black-color,
+        500: $black-color,
+        600: $black-color,
+        700: white,
+        A700: white,
+        800: white,
+        900: white,
+    )
+);
+
+$tertiary-palette: (
+    50: #fff9e1,
+    100: #feedb4,
+    A100: #feedb4,
+    200: #fee283,
+    A200: #fee283,
+    300: #fed850,
+    400: #ffcd29,
+    A400: #ffcd29,
+    500: #ffc509,
+    600: #ffb700,
+    A600: #ffb700,
+    700: #ffa400,
+    A700: #ffa400,
+    800: #ff9300,
+    900: #ff7300,
+    contrast: (
+        50: $black-color,
+        100: $black-color,
+        A100: $black-color,
+        200: $black-color,
+        A200: $black-color,
+        300: $black-color,
+        400: $black-color,
+        A400: $black-color,
+        500: $black-color,
+        600: $black-color,
+        A600: $black-color,
+        700: white,
+        A700: white,
+        800: white,
+        900: white,
+    )
+);
+
+$bioceres-admin-primary: mat.define-palette($primary-palette);
+$bioceres-admin-accent: mat.define-palette($secondary-palette, A200, A100, A400);
+$bioceres-admin-secondary: mat.define-palette($secondary-palette, A200, A100, A400);
+$bioceres-admin-tertiary: mat.define-palette($tertiary-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$bioceres-admin-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$bioceres-admin-theme: mat.define-light-theme((
+  color: (
+    primary: $bioceres-admin-primary,
+    accent: $bioceres-admin-accent,
+    warn: $bioceres-admin-warn,
+  )
+));
+
+.mat-secondary {
+    background-color: map-get($bioceres-admin-secondary, A300) !important;
+    color: map-get($bioceres-admin-secondary, contrast-A300) !important;
+}
+
+.mat-tertiary {
+    background-color: map-get($bioceres-admin-tertiary, A600) !important;
+    color: map-get($bioceres-admin-tertiary, contrast-A600) !important;
+}
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($bioceres-admin-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import 'ngx-toastr/toastr';
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background: none !important;
+}
