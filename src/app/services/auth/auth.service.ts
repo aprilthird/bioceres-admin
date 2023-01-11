@@ -34,4 +34,10 @@ export class AuthService {
       concatMap(item => of(item).pipe(delay(2000)))
     );
   }
+
+  public list(): Observable<any> {
+    return from([this.users]).pipe(
+      concatMap(item => of(item).pipe(delay(2000)))
+    );
+  }
 }

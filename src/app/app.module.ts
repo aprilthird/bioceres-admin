@@ -13,6 +13,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
@@ -28,6 +31,9 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     MatInputModule,
     MatButtonModule,
+    MatSelectModule,
+    MatTableModule,
+    MatPaginatorModule,
 
     ToastrModule.forRoot({
       positionClass :'toast-bottom-right'
