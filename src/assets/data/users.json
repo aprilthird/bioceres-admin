@@ -4,132 +4,227 @@
         "password": "123456",
         "email": "jeffreyrm96@gmail.com",
         "first_name": "Luis Jeffrey",
-        "last_name": "Rojas Montes"
+        "last_name": "Rojas Montes",
+        "role" : "admin",
+        "cuit": "20123456789",
+        "dni" : "12345678",
+        "phone" : "123456789",
+        "birthdate" : "1996-04-03"
     },
     {
         "username": "user1",
         "password": "112233",
         "email": "user1@gmail.com",
         "first_name": "Usuario",
-        "last_name": "Prueba"
+        "last_name": "Prueba",
+        "role" : "user",
+        "cuit": "20123456799",
+        "dni" : "12345679",
+        "phone" : "123456789",
+        "birthdate" : "1994-07-12"
     },
     {
       "username": "user2",
       "password": "112233",
       "email": "user2@gmail.com",
       "first_name": "Usuario2",
-      "last_name": "Prueba2"
+      "last_name": "Prueba2",
+      "role" : "user",
+      "cuit": "20123456709",
+      "dni" : "12345670",
+      "phone" : "123456789",
+      "birthdate" : "1995-06-06"
     },
     {
     "username": "user3",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario3",
-    "last_name": "Prueba3"
+    "last_name": "Prueba3",
+      "role" : "user",
+      "cuit": "20223456789",
+      "dni" : "22345679",
+      "phone" : "123456789",
+      "birthdate" : "1995-06-14"
     },
   {
     "username": "user4",
     "password": "112233",
     "email": "user4@gmail.com",
     "first_name": "Usuario4",
-    "last_name": "Prueba4"
+    "last_name": "Prueba4",
+    "role" : "user",
+    "cuit": "20323456709",
+    "dni" : "32345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user5",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario5",
-    "last_name": "Prueba5"
+    "last_name": "Prueba5",
+    "role" : "user",
+    "cuit": "20423456709",
+    "dni" : "42345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-21"
   },
   {
     "username": "user6",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario6",
-    "last_name": "Prueba6"
+    "last_name": "Prueba6",
+    "role" : "user",
+    "cuit": "20523456709",
+    "dni" : "52345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-05-20"
   },
   {
     "username": "user7",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario7",
-    "last_name": "Prueba7"
+    "last_name": "Prueba7",
+    "role" : "user",
+    "cuit": "20623456709",
+    "dni" : "62345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user8",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario8",
-    "last_name": "Prueba8"
+    "last_name": "Prueba8",
+    "role" : "user",
+    "cuit": "20723456709",
+    "dni" : "72345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user9",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario9",
-    "last_name": "Prueba9"
+    "last_name": "Prueba9",
+    "role" : "user",
+    "cuit": "20823456709",
+    "dni" : "82345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user10",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario10",
-    "last_name": "Prueba10"
+    "last_name": "Prueba10",
+    "role" : "user",
+    "cuit": "20923456709",
+    "dni" : "92345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user11",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario11",
-    "last_name": "Prueba11"
+    "last_name": "Prueba11",
+    "role" : "user",
+    "cuit": "20333456709",
+    "dni" : "33345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user12",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario12",
-    "last_name": "Prueba12"
+    "last_name": "Prueba12",
+    "role" : "user",
+    "cuit": "20343456709",
+    "dni" : "34345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user13",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario13",
-    "last_name": "Prueba13"
+    "last_name": "Prueba13",
+    "role" : "user",
+    "cuit": "20353456709",
+    "dni" : "35345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user14",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario14",
-    "last_name": "Prueba14"
+    "last_name": "Prueba14",
+    "role" : "user",
+    "cuit": "20363456709",
+    "dni" : "36345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user15",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario15",
-    "last_name": "Prueba15"
+    "last_name": "Prueba15",
+    "role" : "user",
+    "cuit": "20373456709",
+    "dni" : "37345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user16",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario16",
-    "last_name": "Prueba16"
+    "last_name": "Prueba16",
+    "role" : "user",
+    "cuit": "20383456709",
+    "dni" : "38345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user17",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario17",
-    "last_name": "Prueba17"
+    "last_name": "Prueba17",
+    "role" : "user",
+    "cuit": "20393456709",
+    "dni" : "39345679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   },
   {
     "username": "user18",
     "password": "112233",
     "email": "user3@gmail.com",
     "first_name": "Usuario18",
-    "last_name": "Prueba18"
+    "last_name": "Prueba18",
+    "role" : "user",
+    "cuit": "20324456709",
+    "dni" : "32445679",
+    "phone" : "123456789",
+    "birthdate" : "1995-06-20"
   }
 ]
