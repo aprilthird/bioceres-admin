@@ -12,5 +12,124 @@
         "email": "user1@gmail.com",
         "first_name": "Usuario",
         "last_name": "Prueba"
-    }
+    },
+    {
+      "username": "user2",
+      "password": "112233",
+      "email": "user2@gmail.com",
+      "first_name": "Usuario2",
+      "last_name": "Prueba2"
+    },
+    {
+    "username": "user3",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario3",
+    "last_name": "Prueba3"
+    },
+  {
+    "username": "user4",
+    "password": "112233",
+    "email": "user4@gmail.com",
+    "first_name": "Usuario4",
+    "last_name": "Prueba4"
+  },
+  {
+    "username": "user5",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario5",
+    "last_name": "Prueba5"
+  },
+  {
+    "username": "user6",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario6",
+    "last_name": "Prueba6"
+  },
+  {
+    "username": "user7",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario7",
+    "last_name": "Prueba7"
+  },
+  {
+    "username": "user8",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario8",
+    "last_name": "Prueba8"
+  },
+  {
+    "username": "user9",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario9",
+    "last_name": "Prueba9"
+  },
+  {
+    "username": "user10",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario10",
+    "last_name": "Prueba10"
+  },
+  {
+    "username": "user11",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario11",
+    "last_name": "Prueba11"
+  },
+  {
+    "username": "user12",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario12",
+    "last_name": "Prueba12"
+  },
+  {
+    "username": "user13",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario13",
+    "last_name": "Prueba13"
+  },
+  {
+    "username": "user14",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario14",
+    "last_name": "Prueba14"
+  },
+  {
+    "username": "user15",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario15",
+    "last_name": "Prueba15"
+  },
+  {
+    "username": "user16",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario16",
+    "last_name": "Prueba16"
+  },
+  {
+    "username": "user17",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario17",
+    "last_name": "Prueba17"
+  },
+  {
+    "username": "user18",
+    "password": "112233",
+    "email": "user3@gmail.com",
+    "first_name": "Usuario18",
+    "last_name": "Prueba18"
+  }
 ]
