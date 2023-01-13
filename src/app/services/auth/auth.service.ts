@@ -14,8 +14,8 @@ export class AuthService {
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
       this.users = data;
-      console.log(data);
     });
+
   }
 
   private getJSON(): Observable<any> {
@@ -36,8 +36,10 @@ export class AuthService {
   }
 
   public list(): Observable<any> {
-    return from([this.users]).pipe(
+    console.log(this.users);
+    return of(this.users);
+/*    return from([this.users]).pipe(
       concatMap(item => of(item).pipe(delay(2000)))
-    );
+    );*/
   }
 }
