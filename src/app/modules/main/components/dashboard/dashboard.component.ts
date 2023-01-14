@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
   user: User;
 
   constructor(private _router: Router) {
-    this.user = new User("", "", "");
+    this.user = new User();
   }
 
   ngOnInit(): void {

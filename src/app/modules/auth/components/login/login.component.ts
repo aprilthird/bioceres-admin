@@ -13,7 +13,7 @@ export class LoginComponent {
   user: User;
 
   constructor(private router: Router, private authService: AuthService, private toastr: ToastrService) { 
-    this.user = new User("", "", "");
+    this.user = new User();
   }
   
   redirectToRecoverPassword(): void {
@@ -23,14 +23,15 @@ export class LoginComponent {
   onLogin(): void {
     console.log(this.user);
     this.authService.login(this.user).subscribe(data => {
-      let loggedUser = data as Array<User>;
-      if(loggedUser == null) {
-        this.toastr.error('Error', 'Usuario no existe');
-      } else {
-        this.toastr.success('Exito', 'Login válido');
-        localStorage.setItem("user", JSON.stringify(loggedUser));
-        this.router.navigateByUrl('/dashboard');
-      }
+      console.log(data);
+      // let loggedUser = data as Array<User>;
+      // if(loggedUser == null) {
+      //   this.toastr.error('Error', 'Usuario no existe');
+      // } else {
+      //   this.toastr.success('Exito', 'Login válido');
+      //   localStorage.setItem("user", JSON.stringify(loggedUser));
+      //   this.router.navigateByUrl('/dashboard');
+      // }
     });
   }
 }

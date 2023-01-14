@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LoginComponent } from './components/login/login.component';
-import { RecoverPasswordComponent } from './components/recover-password/recover-password.component';
-import { UsersComponent } from './components/users/users.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent, pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'recover-password', component: RecoverPasswordComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'users', component: UsersComponent },
+  {
+    path: '',
+    component: AppComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => 
+          import("./modules/auth/auth.module").then((m) => m.AuthModule),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import("./modules/main/main.module").then((m) => m.MainModule),
+      }
+    ]
+  }
 ];
 
 @NgModule({
