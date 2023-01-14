@@ -10,7 +10,8 @@
       "cuit": "20123456789",
       "dni": "12345678",
       "phone": "123456789",
-      "birthdate": "1996-04-03"
+      "birthdate": "1996-04-03",
+      "birthlocation" : "Jesus Maria"
     },
     {
       "username": "user1",
@@ -22,7 +23,8 @@
       "cuit": "20123456799",
       "dni": "12345679",
       "phone": "123456789",
-      "birthdate": "1994-07-12"
+      "birthdate": "1994-07-12",
+      "birthlocation" : "San Luis"
     },
     {
       "username": "user2",
@@ -34,7 +36,8 @@
       "cuit": "20123456709",
       "dni": "12345670",
       "phone": "123456789",
-      "birthdate": "1995-06-06"
+      "birthdate": "1995-06-06",
+      "birthlocation" : "San Luis"
     },
     {
       "username": "user3",
@@ -46,7 +49,8 @@
       "cuit": "20223456789",
       "dni": "22345679",
       "phone": "123456789",
-      "birthdate": "1995-06-14"
+      "birthdate": "1995-06-14",
+      "birthlocation" : "Magdalena"
     },
     {
       "username": "user4",
@@ -58,7 +62,8 @@
       "cuit": "20323456709",
       "dni": "32345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Jesus Maria"
     },
     {
       "username": "user5",
@@ -70,7 +75,8 @@
       "cuit": "20423456709",
       "dni": "42345679",
       "phone": "123456789",
-      "birthdate": "1995-06-21"
+      "birthdate": "1995-06-21",
+      "birthlocation" : "El Agustino"
     },
     {
       "username": "user6",
@@ -82,7 +88,8 @@
       "cuit": "20523456709",
       "dni": "52345679",
       "phone": "123456789",
-      "birthdate": "1995-05-20"
+      "birthdate": "1995-05-20",
+      "birthlocation" : "San Luis"
     },
     {
       "username": "user7",
@@ -94,7 +101,8 @@
       "cuit": "20623456709",
       "dni": "62345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Jesus Maria"
     },
     {
       "username": "user8",
@@ -106,7 +114,8 @@
       "cuit": "20723456709",
       "dni": "72345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Ventanilla"
     },
     {
       "username": "user9",
@@ -118,7 +127,8 @@
       "cuit": "20823456709",
       "dni": "82345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Los Olivos"
     },
     {
       "username": "user10",
@@ -130,7 +140,8 @@
       "cuit": "20923456709",
       "dni": "92345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "San Luis"
     },
     {
       "username": "user11",
@@ -142,7 +153,8 @@
       "cuit": "20333456709",
       "dni": "33345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Cercado de Lima"
     },
     {
       "username": "user12",
@@ -154,7 +166,8 @@
       "cuit": "20343456709",
       "dni": "34345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Breña"
     },
     {
       "username": "user13",
@@ -166,7 +179,8 @@
       "cuit": "20353456709",
       "dni": "35345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Jesus Maria"
     },
     {
       "username": "user14",
@@ -178,7 +192,8 @@
       "cuit": "20363456709",
       "dni": "36345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Jesus Maria"
     },
     {
       "username": "user15",
@@ -190,7 +205,8 @@
       "cuit": "20373456709",
       "dni": "37345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Miraflores"
     },
     {
       "username": "user16",
@@ -202,7 +218,8 @@
       "cuit": "20383456709",
       "dni": "38345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Jesus Maria"
     },
     {
       "username": "user17",
@@ -214,7 +231,8 @@
       "cuit": "20393456709",
       "dni": "39345679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Jesus Maria"
     },
     {
       "username": "user18",
@@ -226,7 +244,8 @@
       "cuit": "20324456709",
       "dni": "32445679",
       "phone": "123456789",
-      "birthdate": "1995-06-20"
+      "birthdate": "1995-06-20",
+      "birthlocation" : "Jesus Maria"
     }
   ]
 }
