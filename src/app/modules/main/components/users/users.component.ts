@@ -18,7 +18,8 @@ export class UsersComponent implements OnInit {
     this.query = "";
   }
 
-  displayedColumns: string[] = ['username'];
+  displayedColumns: string[] = ['username','first_name','dni','cuit','role','email','phone','birthdate','birthlocation'];
+
 
   ngOnInit(): void {
     this.userService.getAll(this.query).subscribe(data => {
