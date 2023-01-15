@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 import { AuthModule } from './modules/auth/auth.module';
 import { MainModule } from './modules/main/main.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 const routerConfig: ExtraOptions = {
   preloadingStrategy: PreloadAllModules,
@@ -30,32 +31,22 @@ const routerConfig: ExtraOptions = {
     AppComponent,
   ],
   imports: [
+    SharedModule,
     AuthModule,
     MainModule,
 
-    HttpClientModule,
-    FormsModule,
-    BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    NgbModule,
 
+    ToastrModule.forRoot({
+      positionClass :'toast-bottom-right'
+    }),
+    
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatTableModule,
-    MatPaginatorModule,
-
-    ToastrModule.forRoot({
-      positionClass :'toast-bottom-right'
-    }), 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,6 +24,7 @@ export class LoginComponent {
     console.log(this.user);
     this.authService.login(this.user).subscribe(data => {
       console.log(data);
+      this.toastr.success('Exito', 'Prueba');
       // let loggedUser = data as Array<User>;
       // if(loggedUser == null) {
       //   this.toastr.error('Error', 'Usuario no existe');

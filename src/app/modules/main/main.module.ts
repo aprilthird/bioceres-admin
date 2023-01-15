@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -24,23 +25,8 @@ import { FormsModule } from '@angular/forms';
     UsersComponent,
   ],
   imports: [
-    CommonModule,
-    RouterModule,
+    SharedModule,
     MainRoutingModule,
-
-    NgbModule,
-    BrowserAnimationsModule,
-    FormsModule,
-
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatTableModule,
-    MatPaginatorModule,
-
-    ToastrModule.forRoot({
-      positionClass :'toast-bottom-right'
-    }), 
   ]
 })
 export class MainModule { }
