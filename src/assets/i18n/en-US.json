@@ -1,0 +1,31 @@
+{
+    "header": {
+        "login": "Login",
+        "password_recovery": "Password Recovery"
+    },
+    "field": {
+        "user": "User",
+        "password": "Password",
+        "email": "Email"
+    },
+    "button": {
+        "forgot_password": "Did you forget your password?",
+        "login": "Login",
+        "restore": "Restore",
+        "welcome": "Welcome, {{name}}"
+    },
+    "text": {
+        "password_recovery": "Enter the email associated with your account. We will send a validation code to your email."
+    },
+    "menu": {
+        "home": "Home",
+        "users": "Users",
+        "actions": "Actions",
+        "companies": "Companies",
+        "biddings": "Biddings",
+        "assemblies": "Assemblies",
+        "public_docs": "Public Docs.",
+        "vpp": "VPP",
+        "logout": "Log Out" 
+    }
+}

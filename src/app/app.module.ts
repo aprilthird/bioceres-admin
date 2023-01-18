@@ -1,30 +1,20 @@
 import { NgModule, isDevMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 import { AuthModule } from './modules/auth/auth.module';
 import { MainModule } from './modules/main/main.module';
 import { SharedModule } from './modules/shared/shared.module';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-const routerConfig: ExtraOptions = {
-  preloadingStrategy: PreloadAllModules,
-  scrollPositionRestoration: "enabled",
-  onSameUrlNavigation: "reload",
-};
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  // return new TranslateHttpLoader(http, './src/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -41,6 +31,14 @@ const routerConfig: ExtraOptions = {
       positionClass :'toast-bottom-right'
     }),
     
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

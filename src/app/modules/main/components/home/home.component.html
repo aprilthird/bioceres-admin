@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row row-cols-2 row-cols-md-3 g-2 g-md-3">
+        <div class="col">
+            <div class="card p-5 border bg-light" (click)="redirectToUsers()">
+                <mat-icon class="card-icon">person</mat-icon>&emsp;{{ 'menu.home' | translate }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-5 border bg-light">
+                <mat-icon class="card-icon">query_stats</mat-icon>&emsp;{{ 'menu.actions' | translate }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-5 border bg-light">
+                <mat-icon class="card-icon">domain</mat-icon>&emsp;{{ 'menu.companies' | translate }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-5 border bg-light">
+                <mat-icon class="card-icon">gavel</mat-icon>&emsp;{{ 'menu.biddings' | translate }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-5 border bg-light">
+                <mat-icon class="card-icon">group</mat-icon>&emsp;{{ 'menu.assemblies' | translate }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-5 border bg-light">
+                <mat-icon class="card-icon">edit_document</mat-icon>&emsp;{{ 'menu.public_docs' | translate }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-5 border bg-light">
+                <mat-icon class="card-icon">find_in_page</mat-icon>&emsp;{{ 'menu.vpp' | translate }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-5 border bg-light" (click)="logout()">
+                <mat-icon class="card-icon">exit_to_app</mat-icon>&emsp;{{ 'menu.logout' | translate }}
+            </div>
+        </div>
+    </div>
+</div>

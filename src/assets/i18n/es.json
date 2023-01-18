@@ -1,0 +1,31 @@
+{
+    "header": {
+        "login": "Ingresar",
+        "password_recovery": "Recuperar Contraseña"
+    },
+    "field": {
+        "user": "Usuario",
+        "password": "Contraseña",
+        "email": "Correo Electrónico"
+    },
+    "button": {
+        "forgot_password": "¿Olvidaste tu contraseña?",
+        "login": "Ingresar",
+        "restore": "Restablecer",
+        "welcome": "Bienvenido, {{name}}"
+    },
+    "text": {
+        "password_recovery": "Ingrese el mail asociado a su cuenta. Le enviaremos a su mail un código de validación."
+    },
+    "menu": {
+        "home": "Principal",
+        "users": "Usuarios",
+        "actions": "Acciones",
+        "companies": "Empresas",
+        "biddings": "Subastas",
+        "assemblies": "Asambleas",
+        "public_docs": "Docs. Públicos",
+        "vpp": "VPP",
+        "logout": "Salir" 
+    }
+}

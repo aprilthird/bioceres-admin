@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>{{formTitle}}</h2>
+    <form class="d-flex flex-column">
+        <mat-form-field>
+            <mat-label>Nombre Usuario</mat-label>
+            <input matInput [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Nombre Empresa</mat-label>
+            <input matInput [(ngModel)]="user.company" [ngModelOptions]="{standalone: true}" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>DNI</mat-label>
+            <input matInput [(ngModel)]="user.dni" [ngModelOptions]="{standalone: true}" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>CUIT</mat-label>
+            <input matInput [(ngModel)]="user.cuit" [ngModelOptions]="{standalone: true}" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Rol</mat-label>
+            <input matInput [(ngModel)]="user.role" [ngModelOptions]="{standalone: true}" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Celular</mat-label>
+            <input matInput [(ngModel)]="user.phoneNumber" [ngModelOptions]="{standalone: true}" />
+        </mat-form-field>
+        <div class="d-flex justify-content-between">
+            <button mat-flat-button type="button" (click)="redirectToUsers()">
+                <mat-icon>arrow_back</mat-icon>Regresar
+            </button>
+            <button mat-flat-button color="primary" type="button" (click)="saveUser()">
+                <mat-icon>save</mat-icon>Confirmar
+            </button>
+        </div>
+    </form>
+</div>  

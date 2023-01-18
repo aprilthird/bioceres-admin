@@ -1,0 +1,18 @@
+.card {
+  color:white ;
+  padding: 5px;
+  max-width: 250px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-icon {
+  transform: scale(2);
+}
+
+.bg-light {
+  background: linear-gradient(40deg, #39ef74, #4600f1 100%);
+}

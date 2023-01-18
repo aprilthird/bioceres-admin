@@ -12,27 +12,32 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 export class LoginComponent {
   user: User;
 
-  constructor(private router: Router, private authService: AuthService, private toastr: ToastrService) { 
+  constructor(private router: Router, private authService: AuthService, private toastr: ToastrService) {
     this.user = new User();
   }
-  
+
   redirectToRecoverPassword(): void {
-    this.router.navigateByUrl('/recover-password');
+    this.router.navigateByUrl('/auth/recover-password');
   }
-  
-  onLogin(): void {
-    console.log(this.user);
-    this.authService.login(this.user).subscribe(data => {
-      console.log(data);
-      this.toastr.success('Exito', 'Prueba');
-      // let loggedUser = data as Array<User>;
-      // if(loggedUser == null) {
-      //   this.toastr.error('Error', 'Usuario no existe');
-      // } else {
-      //   this.toastr.success('Exito', 'Login válido');
-      //   localStorage.setItem("user", JSON.stringify(loggedUser));
-      //   this.router.navigateByUrl('/dashboard');
-      // }
+
+  login(): void {
+    this.authService.login(this.user).subscribe({
+      next: (data) => {
+        if (data != null) {
+          if (data[0] != null) {
+            localStorage.setItem('user', JSON.stringify(data[0]));
+            this.toastr.success('Login exitoso', 'Exito');
+            this.router.navigateByUrl('/home');
+          } else {
+            this.toastr.error('Login fallido', 'Error');
+          }
+        } else {
+          this.toastr.error('Login fallido', 'Error');
+        }
+      },
+      error: (error) => {
+        this.toastr.error('Login fallido', 'Error');
+      }
     });
   }
 }

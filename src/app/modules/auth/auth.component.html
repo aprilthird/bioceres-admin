@@ -1,1 +1,23 @@
-<router-outlet></router-outlet>
+
+<div class="vh-100">
+    <div class="d-flex h-100 flex-row">
+        <div class="col-md-4 bg-dark d-flex align-items-end justify-content-center">
+            <img src="./assets/images/login-bg.png" />
+        </div>
+        <div class="col-md-8 d-flex align-items-center flex-column">
+            <mat-toolbar>
+                <mat-toolbar-row class="d-flex justify-content-end align-items-center">
+                    <div class="d-flex flex-row justify-content-evenly align-items-center" style="width: 80px;">
+                        <h5 class="mb-0">ES</h5>
+                        <mat-slide-toggle [(ngModel)]="isChecked" (change)="changeLanguage()"></mat-slide-toggle>
+                        <h5 class="mb-0">EN</h5>
+                    </div>
+                </mat-toolbar-row>
+            </mat-toolbar>
+            <div class="d-flex align-items-center flex-grow-1">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>    
+</div>
+

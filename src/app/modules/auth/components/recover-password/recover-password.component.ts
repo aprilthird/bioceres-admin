@@ -11,6 +11,6 @@ export class RecoverPasswordComponent {
   constructor(private _router: Router) { }
   
   onRecover(): void {
-    this._router.navigateByUrl('/login');
+    this._router.navigateByUrl('/auth/login');
   }
 }

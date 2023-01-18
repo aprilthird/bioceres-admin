@@ -1,1 +1,76 @@
-<router-outlet></router-outlet>
+<mat-toolbar>
+    <mat-toolbar-row class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <button mat-icon-button (click)="opened=!opened">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <h1 class="mb-0">BIOCERES</h1>
+        </div>
+        <mat-select value="1" style="max-width: 180px;" (selectionChange)="reloadApp()">
+            <mat-option value="1">Empresa 1</mat-option>
+            <mat-option value="2">Empresa 2</mat-option>
+        </mat-select>
+        <div class="d-flex flex-row justify-content-evenly align-items-center" style="width: 80px;">
+            <h5 class="mb-0">ES</h5>
+            <mat-slide-toggle [(ngModel)]="isChecked" (change)="changeLanguage()"></mat-slide-toggle>
+            <h5 class="mb-0">EN</h5>
+        </div>
+        <button mat-button (click)="logout()">{{ 'button.welcome' | translate:{'name': user.username} }}</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="push" mode="side">
+        <mat-list class="d-flex flex-column align-items-start justify-content-start">
+            <mat-list-item>
+                <a mat-button routerLink="/home">
+                    <mat-icon>home</mat-icon>{{ 'menu.home' | translate }}
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button routerLink="/users">
+                    <mat-icon>person</mat-icon>{{ 'menu.home' | translate }}
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button routerLink="/users">
+                    <mat-icon>query_stats</mat-icon>{{ 'menu.actions' | translate }}
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button routerLink="/users">
+                    <mat-icon>domain</mat-icon>{{ 'menu.companies' | translate }}
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button routerLink="/users">
+                    <mat-icon>gavel</mat-icon>{{ 'menu.biddings' | translate }}
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button routerLink="/users">
+                    <mat-icon>group</mat-icon>{{ 'menu.assemblies' | translate }}
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button routerLink="/users">
+                    <mat-icon>edit_document</mat-icon>{{ 'menu.public_docs' | translate }}
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button routerLink="/users">
+                    <mat-icon>find_in_page</mat-icon>{{ 'menu.vpp' | translate }}
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button (click)="logout()">
+                    <mat-icon>exit_to_app</mat-icon>{{ 'menu.logout' | translate }}
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="m-3 mh-100">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
