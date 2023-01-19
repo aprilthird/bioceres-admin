@@ -3,6 +3,24 @@
         "login": "Login",
         "password_recovery": "Password Recovery"
     },
+  "user_field": {
+    "username": "Username",
+    "company" : "Company",
+    "dni" : "DNI",
+    "cuit" : "CUIT",
+    "role": "Role",
+    "email": "Email",
+    "phone" : "Phone",
+    "birthdate" : "Birthdate/Constitution",
+    "birthlocation" : "Birthlocation/Constitución",
+    "return" : "Return",
+    "confirm" : "Confirm"
+  },
+  "menu_common": {
+    "edit": "Edit",
+    "delete" : "Delete",
+    "refreshpassword" : "Refresh Password"
+  },
     "field": {
         "user": "User",
         "password": "Password",
@@ -26,6 +44,6 @@
         "assemblies": "Assemblies",
         "public_docs": "Public Docs.",
         "vpp": "VPP",
-        "logout": "Log Out" 
+        "logout": "Log Out"
     }
 }
