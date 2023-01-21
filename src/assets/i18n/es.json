@@ -1,49 +1,86 @@
 {
-    "header": {
-        "login": "Ingresar",
-        "password_recovery": "Recuperar Contraseña"
-    },
-  "user_field": {
-    "username": "Username",
-    "company" : "Company",
+  "header": {
+    "login": "Ingresar",
+    "password_recovery": "Recuperar Contraseña",
+    "users": "Users",
+    "new_user": "New User",
+    "edit_user": "Edit User"
+  },
+  "field": {
+    "user": "Usuario",
+    "password": "Contraseña",
+    "email": "Correo Electrónico",
+    "username": "Nombre de Usuario",
+    "company" : "Empresa",
     "dni" : "DNI",
     "cuit" : "CUIT",
-    "role": "Role",
-    "email": "Email",
-    "phone" : "Phone",
-    "birthdate" : "Fecha de nacimiento/Constitución",
-    "birthlocation" : "Lugar de nacimiento/Constitución",
-    "return" : "Return",
-    "confirm" : "Confirm"
+    "role": "Rol",
+    "phone_number" : "Teléfono",
+    "birthdate" : "Fecha de Nacimiento/Constitución",
+    "birth_location" : "Lugar de Nacimiento/Constitución"
   },
-  "menu_common": {
+  "table_header": {
+    "username": "Usuario",
+    "company": "Empresa",
+    "dni": "DNI",
+    "cuit": "CUIT",
+    "role": "Rol",
+    "email": "Correo",
+    "phone_number": "Teléfono",
+    "birthdate": "Fecha nac./Constitution",
+    "birth_location": "Lugar nac./Constitution"
+  },
+  "button": {
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "login": "Ingresar",
+    "restore": "Restablecer",
+    "welcome": "Bienvenido, {{name}}",
+    "back" : "Regresar",
+    "confirm" : "Confirmar"
+  },
+  "option": {
     "edit": "Editar",
     "delete" : "Eliminar",
-    "refreshpassword" : "Blanquear contraseña"
+    "password_bleaching" : "Blanquear Contraseña"
   },
-    "field": {
-        "user": "Usuario",
-        "password": "Contraseña",
-        "email": "Correo Electrónico"
+  "text": {
+    "password_recovery": "Ingrese el mail asociado a su cuenta. Le enviaremos a su mail un código de validación."
+  },
+  "menu": {
+    "home": "Principal",
+    "users": "Usuarios",
+    "actions": "Acciones",
+    "companies": "Empresas",
+    "biddings": "Subastas",
+    "assemblies": "Asambleas",
+    "public_docs": "Docs. Públicos",
+    "vpp": "VPP",
+    "logout": "Salir"
+  },
+  "notification": {
+    "header": {
+      "success": "Exito",
+      "error": "Error",
+      "warning": "Alerta",
+      "info": "Información"
     },
-    "button": {
-        "forgot_password": "¿Olvidaste tu contraseña?",
-        "login": "Ingresar",
-        "restore": "Restablecer",
-        "welcome": "Bienvenido, {{name}}"
-    },
-    "text": {
-        "password_recovery": "Ingrese el mail asociado a su cuenta. Le enviaremos a su mail un código de validación."
-    },
-    "menu": {
-        "home": "Principal",
-        "users": "Usuarios",
-        "actions": "Acciones",
-        "companies": "Empresas",
-        "biddings": "Subastas",
-        "assemblies": "Asambleas",
-        "public_docs": "Docs. Públicos",
-        "vpp": "VPP",
-        "logout": "Salir"
+    "message": {
+      "success": {
+        "login": "Login exitoso",
+        "user_deletion": "Se eliminó al usuario con éxito",
+        "password_bleaching": "Se blanqueó la contraseña del usuario con éxito",
+        "user_creation": "Se creó al usuario con éxito",
+        "user_edit": "Se editó al usuario con éxito"
+      },
+      "error": {
+        "login": "Login fallido",
+        "user_load": "Error al intentar obtener los usuarios",
+        "user_deletion": "Error al intentar eliminar al usuario",
+        "password_bleaching": "Error al intentar blanquear la contraseña del usuario",
+        "user_info_load": "Error al intentar cargar la Información del usuario",
+        "user_creation": "Error al intentar crear al usuario",
+        "user_edit": "Error al intentar editar al usuario"
+      }
     }
+  }
 }

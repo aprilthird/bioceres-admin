@@ -2,39 +2,50 @@
     <h2>{{formTitle}}</h2>
     <form class="d-flex flex-column">
         <mat-form-field>
-            <mat-label>{{ 'user_field.username' | translate }}</mat-label>
+            <mat-label>{{ 'field.username' | translate }}</mat-label>
             <input matInput [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" />
         </mat-form-field>
         <mat-form-field>
-            <mat-label>{{ 'user_field.company' | translate }}</mat-label>
+            <mat-label>{{ 'field.company' | translate }}</mat-label>
             <input matInput [(ngModel)]="user.company" [ngModelOptions]="{standalone: true}" />
         </mat-form-field>
         <mat-form-field>
-            <mat-label>{{ 'user_field.dni' | translate }}</mat-label>
+            <mat-label>{{ 'field.dni' | translate }}</mat-label>
             <input matInput [(ngModel)]="user.dni" [ngModelOptions]="{standalone: true}" />
         </mat-form-field>
         <mat-form-field>
-            <mat-label>{{ 'user_field.cuit' | translate }}</mat-label>
+            <mat-label>{{ 'field.cuit' | translate }}</mat-label>
             <input matInput [(ngModel)]="user.cuit" [ngModelOptions]="{standalone: true}" />
         </mat-form-field>
         <mat-form-field>
-            <mat-label>{{ 'user_field.role' | translate }}</mat-label>
+            <mat-label>{{ 'field.role' | translate }}</mat-label>
             <input matInput [(ngModel)]="user.role" [ngModelOptions]="{standalone: true}" />
         </mat-form-field>
         <mat-form-field>
-            <mat-label>{{ 'user_field.email' | translate }}</mat-label>
+            <mat-label>{{ 'field.email' | translate }}</mat-label>
             <input matInput [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" />
         </mat-form-field>
         <mat-form-field>
-            <mat-label>{{ 'user_field.phone' | translate }}</mat-label>
+            <mat-label>{{ 'field.phone_number' | translate }}</mat-label>
             <input matInput [(ngModel)]="user.phoneNumber" [ngModelOptions]="{standalone: true}" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>{{ 'field.birthdate' | translate }}</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="user.birthdate" [ngModelOptions]="{standalone: true}">
+            <!-- <mat-hint>DD/MM/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>{{ 'field.birth_location' | translate }}</mat-label>
+            <input matInput [(ngModel)]="user.birthLocation" [ngModelOptions]="{standalone: true}" />
         </mat-form-field>
         <div class="d-flex justify-content-between">
             <button mat-flat-button type="button" (click)="redirectToUsers()">
-                <mat-icon>arrow_back</mat-icon>{{ 'user_field.return' | translate }}Regresar
+                <mat-icon>arrow_back</mat-icon>{{ 'button.back' | translate }}
             </button>
             <button mat-flat-button color="primary" type="button" (click)="saveUser()">
-                <mat-icon>save</mat-icon>{{ 'user_field.confirm' | translate }}Confirmar
+                <mat-icon>save</mat-icon>{{ 'button.confirm' | translate }}
             </button>
         </div>
     </form>

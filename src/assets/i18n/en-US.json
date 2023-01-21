@@ -1,49 +1,86 @@
 {
-    "header": {
-        "login": "Login",
-        "password_recovery": "Password Recovery"
-    },
-  "user_field": {
+  "header": {
+    "login": "Login",
+    "password_recovery": "Password Recovery",
+    "users": "Usuarios",
+    "new_user": "Nuevo Usuario",
+    "edit_user": "Editar Usuario"
+  },
+  "field": {
+    "user": "User",
+    "password": "Password",
+    "email": "Email",
     "username": "Username",
-    "company" : "Company",
-    "dni" : "DNI",
-    "cuit" : "CUIT",
+    "company": "Company",
+    "dni": "DNI",
+    "cuit": "CUIT",
+    "role": "Role",
+    "phone_number": "Phone Number",
+    "birthdate": "Birthdate/Constitution",
+    "birth_location": "Birth Location/Constitution"
+  },
+  "table_header": {
+    "username": "Username",
+    "company": "Company",
+    "dni": "DNI",
+    "cuit": "CUIT",
     "role": "Role",
     "email": "Email",
-    "phone" : "Phone",
-    "birthdate" : "Birthdate/Constitution",
-    "birthlocation" : "Birthlocation/Constitución",
-    "return" : "Return",
+    "phone_number": "Phone",
+    "birthdate": "Birthdate/Constitution",
+    "birth_location": "Birth Location/Constitution"
+  },
+  "button": {
+    "forgot_password": "Did you forget your password?",
+    "login": "Login",
+    "restore": "Restore",
+    "welcome": "Welcome, {{name}}",
+    "back" : "Back",
     "confirm" : "Confirm"
   },
-  "menu_common": {
+  "option": {
     "edit": "Edit",
-    "delete" : "Delete",
-    "refreshpassword" : "Refresh Password"
+    "delete": "Delete",
+    "password_bleaching": "Blank Password"
   },
-    "field": {
-        "user": "User",
-        "password": "Password",
-        "email": "Email"
+  "text": {
+    "password_recovery": "Enter the email associated with your account. We will send a validation code to your email."
+  },
+  "menu": {
+    "home": "Home",
+    "users": "Users",
+    "actions": "Actions",
+    "companies": "Companies",
+    "biddings": "Biddings",
+    "assemblies": "Assemblies",
+    "public_docs": "Public Docs.",
+    "vpp": "VPP",
+    "logout": "Log Out"
+  },
+  "notification": {
+    "header": {
+      "success": "Success",
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Info"
     },
-    "button": {
-        "forgot_password": "Did you forget your password?",
-        "login": "Login",
-        "restore": "Restore",
-        "welcome": "Welcome, {{name}}"
-    },
-    "text": {
-        "password_recovery": "Enter the email associated with your account. We will send a validation code to your email."
-    },
-    "menu": {
-        "home": "Home",
-        "users": "Users",
-        "actions": "Actions",
-        "companies": "Companies",
-        "biddings": "Biddings",
-        "assemblies": "Assemblies",
-        "public_docs": "Public Docs.",
-        "vpp": "VPP",
-        "logout": "Log Out"
+    "message": {
+      "success": {
+        "login": "Login successfully",
+        "user_deletion": "User was successfully removed",
+        "password_bleaching": "The user's password was successfully bleached",
+        "user_creation": "User created successfully",
+        "user_edit": "User edited successfully"
+      },
+      "error": {
+        "login": "Login failed",
+        "user_load": "Error trying to get users",
+        "user_deletion": "Error trying to delete user",
+        "password_bleaching": "Error trying to whiten user's password",
+        "user_info_load": "Error trying to load user information",
+        "user_creation": "Error trying to create user",
+        "user_edit": "Error trying to edit user"
+      }
     }
+  }
 }

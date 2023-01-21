@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/models/user';
 import { UsersService } from 'src/app/services/users/users.service';
@@ -15,7 +16,7 @@ export class UserFormComponent implements OnInit, OnDestroy {
   id: Number;
   private sub: any;
 
-  constructor(private route: ActivatedRoute, private router: Router, private userService: UsersService, private toastr: ToastrService) {
+  constructor(private route: ActivatedRoute, private router: Router, private userService: UsersService, private toastr: ToastrService, private translateService: TranslateService) {
     this.formTitle = 'Crear Usuario';
     this.user = new User();
     this.id = 0;
@@ -30,8 +31,12 @@ export class UserFormComponent implements OnInit, OnDestroy {
           this.user = JSON.parse(userToEdit);
           this.formTitle = 'Editar Usuario';
         } else {
-          this.toastr.error('Ocurrió un error cargando el usuario.', 'Error');
-          this.router.navigateByUrl('users');
+          this.translateService.get('notification.header.error').subscribe(headerStr => {
+            this.translateService.get('notification.message.error.user_info_load').subscribe(messageStr => {
+              this.toastr.error(messageStr, headerStr);
+              this.router.navigateByUrl('users');
+            });              
+          });
         }
       }
     });
@@ -50,28 +55,52 @@ export class UserFormComponent implements OnInit, OnDestroy {
       this.userService.post(this.user).subscribe({
         next: (data) => {
           if (data != null) {
-            this.toastr.success('Registro válido', 'Exito');
-            this.router.navigateByUrl('users');
+            this.translateService.get('notification.header.success').subscribe(headerStr => {
+              this.translateService.get('notification.message.success.user_creation').subscribe(messageStr => {
+                this.toastr.success(messageStr, headerStr);
+                this.router.navigateByUrl('users');
+              });              
+            });
           } else {
-            this.toastr.error('Registro fallido', 'Error');
+            this.translateService.get('notification.header.error').subscribe(headerStr => {
+              this.translateService.get('notification.message.error.user_creation').subscribe(messageStr => {
+                this.toastr.error(messageStr, headerStr);
+              });              
+            });
           }
         },
         error: (error) => {
-          this.toastr.error('Registro fallido', 'Error');
+          this.translateService.get('notification.header.error').subscribe(headerStr => {
+            this.translateService.get('notification.message.error.user_creation').subscribe(messageStr => {
+              this.toastr.error(messageStr, headerStr);
+            });              
+          });
         }
       });
     } else {
       this.userService.put(this.user).subscribe({
         next: (data) => {
           if (data != null) {
-            this.toastr.success('Edición válida', 'Exito');
-            this.router.navigateByUrl('users');
+            this.translateService.get('notification.header.success').subscribe(headerStr => {
+              this.translateService.get('notification.message.success.user_edit').subscribe(messageStr => {
+                this.toastr.success(messageStr, headerStr);
+                this.router.navigateByUrl('users');
+              });              
+            });
           } else {
-            this.toastr.error('Edición fallida', 'Error');
+            this.translateService.get('notification.header.error').subscribe(headerStr => {
+              this.translateService.get('notification.message.error.user_edit').subscribe(messageStr => {
+                this.toastr.error(messageStr, headerStr);
+              });              
+            });
           }
         },
         error: (error) => {
-          this.toastr.error('Edición fallida', 'Error');
+          this.translateService.get('notification.header.error').subscribe(headerStr => {
+            this.translateService.get('notification.message.error.user_edit').subscribe(messageStr => {
+              this.toastr.error(messageStr, headerStr);
+            });              
+          });
         }
       });
     }

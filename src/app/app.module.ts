@@ -1,5 +1,4 @@
 import { NgModule, isDevMode } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -10,9 +9,10 @@ import { MainModule } from './modules/main/main.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DateAdapter, MAT_DATE_LOCALE, NativeDateAdapter } from '@angular/material/core';
+import { Constants } from './helpers/constants';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  // return new TranslateHttpLoader(http, './src/assets/i18n/', '.json');
   return new TranslateHttpLoader(http);
 }
 
@@ -46,7 +46,10 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       registrationStrategy: 'registerWhenStable:30000'
     }),
   ],
-  providers: [],
+  providers: [
+    { provide: DateAdapter, useClass: NativeDateAdapter, deps: [MAT_DATE_LOCALE] },
+    { provide: MAT_DATE_LOCALE, useValue: Constants.dateFormats }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

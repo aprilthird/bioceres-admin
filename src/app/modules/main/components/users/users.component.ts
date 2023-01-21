@@ -6,6 +6,7 @@ import { UsersService } from 'src/app/services/users/users.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { Constants } from 'src/app/helpers/constants';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-users',
@@ -19,7 +20,7 @@ export class UsersComponent implements AfterViewInit {
   displayedColumns: string[];
   @ViewChild(MatPaginator) paginator: any = MatPaginator;
 
-  constructor(private router: Router, private userService: UsersService, private toastr: ToastrService) {
+  constructor(private router: Router, private userService: UsersService, private toastr: ToastrService, private translateService: TranslateService) {
     this.users = [];
     this.dataSource = new MatTableDataSource<User>(this.users); 
     this.query = '';
@@ -43,11 +44,21 @@ export class UsersComponent implements AfterViewInit {
       next: (data) => {
         this.users = data;
         this.dataSource.data = this.users;
+        console.log(Date.parse(this.users[0].birthdate as string).toString())
       },
       error: (error) => {
-        this.toastr.error('Error al intentar obtener los usuarios.', 'Error');
+        this.translateService.get('notification.header.error').subscribe(headerStr => {
+          this.translateService.get('notification.message.error.user_load').subscribe(messageStr => {
+            this.toastr.error(messageStr, headerStr);
+          });              
+        });
       }
     });
+  }
+
+  parsedBirthDateString(birthDate: String): String {
+    var date = new Date(birthDate as string);
+    return date.toLocaleDateString();
   }
 
   redirectToUserForm(user: User = new User()): void {
@@ -64,14 +75,26 @@ export class UsersComponent implements AfterViewInit {
       this.userService.delete(user.id).subscribe({
         next: (data) => {
           this.getUsers();
-          this.toastr.success('Se eliminó al usuario con éxito.', 'Exito');
+          this.translateService.get('notification.header.success').subscribe(headerStr => {
+            this.translateService.get('notification.message.success.user_deletion').subscribe(messageStr => {
+              this.toastr.success(messageStr, headerStr);
+            });              
+          });
         },
         error: (error) => {
-          this.toastr.error('Error al intentar eliminar al usuario.', 'Error');
+          this.translateService.get('notification.header.error').subscribe(headerStr => {
+            this.translateService.get('notification.message.error.user_deletion').subscribe(messageStr => {
+              this.toastr.error(messageStr, headerStr);
+            });              
+          });
         }
       });
     } else {
-      this.toastr.error('Error al intentar eliminar al usuario.', 'Error');
+      this.translateService.get('notification.header.error').subscribe(headerStr => {
+        this.translateService.get('notification.message.error.user_deletion').subscribe(messageStr => {
+          this.toastr.error(messageStr, headerStr);
+        });              
+      });
     }
   }
 
@@ -80,14 +103,26 @@ export class UsersComponent implements AfterViewInit {
       user.password = Constants.defaultPassword;
       this.userService.put(user).subscribe({
         next: (data) => {
-          this.toastr.success('Se blanqueó la contraseña del usuario con éxito.', 'Exito');
+          this.translateService.get('notification.header.success').subscribe(headerStr => {
+            this.translateService.get('notification.message.success.password_bleaching').subscribe(messageStr => {
+              this.toastr.success(messageStr, headerStr);
+            });              
+          });
         },
         error: (error) => {
-          this.toastr.error('Error al intentar blanquear la contraseña del usuario.', 'Error');
+          this.translateService.get('notification.header.error').subscribe(headerStr => {
+            this.translateService.get('notification.message.error.password_bleaching').subscribe(messageStr => {
+              this.toastr.error(messageStr, headerStr);
+            });              
+          });
         }
       });
     } else {
-      this.toastr.error('Error al intentar blanquear la contraseña del usuario.', 'Error');
+      this.translateService.get('notification.header.error').subscribe(headerStr => {
+        this.translateService.get('notification.message.error.password_bleaching').subscribe(messageStr => {
+          this.toastr.error(messageStr, headerStr);
+        });              
+      });
     }
   }
 }

@@ -8,4 +8,10 @@ export class Constants {
 
     static spanishLocale: String = 'es';
     static englishLocale: String = 'en-US';
+
+    static dateFormats = {
+        display: {
+            dateInput: 'DD/MMM/YYYY'
+        }
+    };
 }

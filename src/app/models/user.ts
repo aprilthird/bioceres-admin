@@ -8,10 +8,13 @@ export class User {
     dni: String;
     cuit: String;
     role: String;
+    birthLocation: String;
+    birthdate: String;
 
     constructor(id?: Number, username: String = "", password: String = "", 
         email: String = "", phoneNumber: String = "", company: String = "",
-        dni: String = "", cuit: String = "", role: String = "") {
+        dni: String = "", cuit: String = "", role: String = "", birthLocation: String = "",
+        birthDate: String = "") {
             this.id = id;
             this.username = username;
             this.password = password;
@@ -21,5 +24,11 @@ export class User {
             this.dni = dni;
             this.cuit = cuit;
             this.role = role;
+            this.birthLocation = birthLocation;
+            this.birthdate = birthDate;
+        }
+    
+    public parsedBirthDateString(): String {
+        return Date.parse(this.birthdate as string).toLocaleString().toString();
     }
 }
