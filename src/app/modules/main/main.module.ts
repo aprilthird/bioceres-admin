@@ -16,6 +16,10 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { AssembliesComponent } from './components/assemblies/assemblies.component';
+import { BiddingsComponent } from './components/biddings/biddings.component';
+import { AssemblyFormComponent } from './components/assembly-form/assembly-form.component';
+import { BiddingFormComponent } from './components/bidding-form/bidding-form.component';
 
 
 
@@ -25,6 +29,10 @@ import { UserFormComponent } from './components/user-form/user-form.component';
     HomeComponent,
     UsersComponent,
     UserFormComponent,
+    AssembliesComponent,
+    BiddingsComponent,
+    AssemblyFormComponent,
+    BiddingFormComponent,
   ],
   imports: [
     SharedModule,

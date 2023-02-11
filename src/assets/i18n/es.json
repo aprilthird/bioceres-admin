@@ -28,7 +28,16 @@
     "email": "Correo",
     "phone_number": "Teléfono",
     "birthdate": "Fecha nac./Constitution",
-    "birth_location": "Lugar nac./Constitution"
+    "birth_location": "Lugar nac./Constitution",
+
+    "name" : "Nombre",
+    "deadline" :  "Fecha Cierre",
+    "publishDate" : "Fecha Publicado",
+    "fiscalYear" : "Año Fiscal",
+    "date" : "Fecha realización",
+    "description" : "Descripción",
+    "isOpen" : "Estado"
+
   },
   "button": {
     "forgot_password": "¿Olvidaste tu contraseña?",
@@ -70,16 +79,27 @@
         "user_deletion": "Se eliminó al usuario con éxito",
         "password_bleaching": "Se blanqueó la contraseña del usuario con éxito",
         "user_creation": "Se creó al usuario con éxito",
-        "user_edit": "Se editó al usuario con éxito"
+        "user_edit": "Se editó al usuario con éxito",
+
+        "assembly_deletion": "Se eliminó la asamblea con éxito",
+        "assembly_creation": "Se creó la asamblea con éxito",
+        "assembly_edit": "Se editó la asamblea con éxito"
       },
       "error": {
         "login": "Login fallido",
+
         "user_load": "Error al intentar obtener los usuarios",
         "user_deletion": "Error al intentar eliminar al usuario",
         "password_bleaching": "Error al intentar blanquear la contraseña del usuario",
         "user_info_load": "Error al intentar cargar la Información del usuario",
         "user_creation": "Error al intentar crear al usuario",
-        "user_edit": "Error al intentar editar al usuario"
+        "user_edit": "Error al intentar editar al usuario",
+
+        "assembly_load": "Error al intentar obtener los asambleas",
+        "assembly_deletion": "Error al intentar eliminar al asamblea",
+        "assembly_info_load": "Error al intentar cargar la Información de la asamblea",
+        "assembly_creation": "Error al intentar crear la asamblea",
+        "assembly_edit": "Error al intentar editar la asamblea"
       }
     }
   }

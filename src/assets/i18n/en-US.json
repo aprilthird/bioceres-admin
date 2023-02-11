@@ -28,7 +28,15 @@
     "email": "Email",
     "phone_number": "Phone",
     "birthdate": "Birthdate/Constitution",
-    "birth_location": "Birth Location/Constitution"
+    "birth_location": "Birth Location/Constitution",
+
+    "name" : "Name",
+    "deadline" :  "Deadline",
+    "publishDate" : "Publish Date",
+    "fiscalYear" : "Fiscal Year",
+    "date" : "Realization Date",
+    "description" : "Description",
+    "isOpen" : "Status"
   },
   "button": {
     "forgot_password": "Did you forget your password?",
@@ -70,7 +78,11 @@
         "user_deletion": "User was successfully removed",
         "password_bleaching": "The user's password was successfully bleached",
         "user_creation": "User created successfully",
-        "user_edit": "User edited successfully"
+        "user_edit": "User edited successfully",
+
+        "assembly_deletion": "Assembly was successfully removed",
+        "assembly_creation": "Assembly created successfully",
+        "assembly_edit": "Assembly edited successfully"
       },
       "error": {
         "login": "Login failed",
@@ -79,7 +91,13 @@
         "password_bleaching": "Error trying to whiten user's password",
         "user_info_load": "Error trying to load user information",
         "user_creation": "Error trying to create user",
-        "user_edit": "Error trying to edit user"
+        "user_edit": "Error trying to edit user",
+
+        "assembly_load": "Error trying to get assemblies",
+        "assembly_deletion": "Error trying to delete assembly",
+        "assembly_info_load": "Error trying to load assembly information",
+        "assembly_creation": "Error trying to create assembly",
+        "assembly_edit": "Error trying to edit assembly"
       }
     }
   }

@@ -3,7 +3,8 @@ export class Constants {
 
     static apiLoginUrl: String = this.baseApiUrl + '/login';
     static apiUsersUrl: String = this.baseApiUrl + '/users';
-
+    static apiAssembliesUrl: String = this.baseApiUrl+ '/assemblies';
+    static apiBiddingsUrl: String = this.baseApiUrl+ '/biddings';
     static defaultPassword: String = '123456';
 
     static spanishLocale: String = 'es';

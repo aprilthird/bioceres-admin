@@ -12,6 +12,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DateAdapter, MAT_DATE_LOCALE, NativeDateAdapter } from '@angular/material/core';
 import { Constants } from './helpers/constants';
 
+
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
@@ -30,7 +31,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     ToastrModule.forRoot({
       positionClass :'toast-bottom-right'
     }),
-    
+
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
