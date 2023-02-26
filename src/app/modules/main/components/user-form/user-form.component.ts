@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
@@ -14,6 +15,7 @@ export class UserFormComponent implements OnInit, OnDestroy {
   formTitle: String;
   user: User;
   id: Number;
+  userForm: FormGroup;
   private sub: any;
 
   constructor(private route: ActivatedRoute, private router: Router, private userService: UsersService, private toastr: ToastrService, private translateService: TranslateService) {
@@ -23,6 +25,21 @@ export class UserFormComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.loadForm();
+    this.loadSubscriber();
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
+
+  loadForm(): void {
+    this.userForm = new FormGroup({
+      username: new FormControl(this.user.username, [Validators.required]),
+    })
+  }
+
+  loadSubscriber(): void {
     this.sub = this.route.params.subscribe(params => {
       if (params['id']) {
         this.id = +params['id'];
@@ -40,10 +57,6 @@ export class UserFormComponent implements OnInit, OnDestroy {
         }
       }
     });
-  }
-
-  ngOnDestroy(): void {
-    this.sub.unsubscribe();
   }
 
   redirectToUsers(): void {

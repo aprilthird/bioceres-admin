@@ -36,10 +36,16 @@ import { MatTabsModule } from '@angular/material/tabs'
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TranslateModule } from '@ngx-translate/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HasErrorRootDirective } from './directives/has-error-root.directive';
+import { HasErrorDirective } from './directives/has-error.directive';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HasErrorRootDirective,
+    HasErrorDirective,
+  ],
   imports: [
     TranslateModule.forChild(),
   ],
@@ -85,6 +91,11 @@ import { TranslateModule } from '@ngx-translate/core';
     MatTabsModule,
     MatTableModule,
     MatPaginatorModule,
+
+    ReactiveFormsModule,
+
+    HasErrorRootDirective,
+    HasErrorDirective,
   ],
 })
 export class SharedModule { }

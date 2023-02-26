@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +13,14 @@ export class HomeComponent {
 
   redirectToUsers(): void {
     this.router.navigateByUrl('/users');
+  }
+
+  redirectToAssemblies(): void {
+    this.router.navigateByUrl('/assemblies');
+  }
+
+  redirectToBiddings(): void {
+    this.router.navigateByUrl('/biddings');
   }
 
   logout(): void {

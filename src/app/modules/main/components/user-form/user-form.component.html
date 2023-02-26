@@ -1,10 +1,15 @@
 <div class="container">
     <h2>{{formTitle}}</h2>
-    <form class="d-flex flex-column">
+    <form class="d-flex flex-column" [formGroup]="userForm" (ngSubmit)="saveUser()">
         <mat-form-field>
             <mat-label>{{ 'field.username' | translate }}</mat-label>
-            <input matInput [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" />
+            <input matInput formControlName="username" required />
         </mat-form-field>
+        <div *ngIf="userForm.controls['username'].invalid && (userForm.controls['username'].dirty || userForm.controls['username'].touched)" class="alert">
+            <div *ngIf="userForm.controls['username'].errors">
+            Please enter username
+          </div>
+        </div>
         <mat-form-field>
             <mat-label>{{ 'field.company' | translate }}</mat-label>
             <input matInput [(ngModel)]="user.company" [ngModelOptions]="{standalone: true}" />
@@ -44,7 +49,7 @@
             <button mat-flat-button type="button" (click)="redirectToUsers()">
                 <mat-icon>arrow_back</mat-icon>{{ 'button.back' | translate }}
             </button>
-            <button mat-flat-button color="primary" type="button" (click)="saveUser()">
+            <button mat-flat-button color="primary" type="button" [disabled]="!userForm.valid">
                 <mat-icon>save</mat-icon>{{ 'button.confirm' | translate }}
             </button>
         </div>
